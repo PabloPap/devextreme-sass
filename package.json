@@ -1,0 +1,16 @@
+{
+  "name": "dx-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "devextreme": "^20.2.3",
+    "devextreme-cli": "^1.2.4"
+  }
+}

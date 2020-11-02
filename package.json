@@ -2,9 +2,13 @@
   "name": "dx-sass",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile-sass": "node-sass main.scss main.css",
+    "serve": "browser-sync start --server --files \"*.css, dist/js/*.js, **/*.html, !node_modules/**/*.html\"",
+    "change": "onchange \"*.scss\" -- npm run compile-sass",
+    "watch": "run-p serve change",
+    "dev": "run-s compile-sass watch"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +16,12 @@
   "dependencies": {
     "devextreme": "^20.2.3",
     "devextreme-cli": "^1.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "browser-sync": "^2.26.13",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0"
   }
 }

@@ -1,0 +1,29 @@
+@use "node_modules/devextreme/scss/bundles/dx.common.scss";
+
+@use "node_modules/devextreme/scss/widgets/material/colors" as A with (
+    $color: "blue",
+    $mode: "light",
+
+    // base variables (affects entire theme and all widgets)
+    $base-text-color: #fff,
+    $base-bg: rgb(20, 77, 77)
+);
+
+@use "node_modules/devextreme/scss/widgets/material/sizes" with ($size: "compact");
+
+@use "node_modules/devextreme/scss/widgets/material/button/colors"  as B with (
+    // colors, specific for button
+    $button-normal-icon-color: #fff
+);
+
+// typography settings (fonts, background color)
+@use "node_modules/devextreme/scss/widgets/material/typography";
+
+// widgets used by app
+
+// my button has an icon, so I need icon classes
+@use "node_modules/devextreme/scss/widgets/material/icons";
+// button
+@use "node_modules/devextreme/scss/widgets/material/button";
+
+@use "scss/base/variables";

@@ -6,6 +6,7 @@
   "scripts": {
     "compile-sass": "dart-sass main.scss main.css",
     "serve": "browser-sync start --server --files \"*.css, dist/js/*.js, **/*.html, !node_modules/**/*.html\"",
+    "icons": "cp -r node_modules/devextreme/dist/css/icons .",
     "change": "onchange \"*.scss\" -- npm run compile-sass",
     "watch": "run-p serve change",
     "dev": "run-s compile-sass watch"
